@@ -5,13 +5,13 @@ $(function() {
             $('.cv-expand').removeClass('open');
             $('.cv-list').slideUp();
             $('.fa-chevron-down').css('transform', '') //矢印回転
-            $('.cv-expand').text('詳しい経歴はこちらから');
+            $('.cv-expand').text('主な案件経歴はこちらから');
             console.log("hide")
         } else {                                //閉じてる場合
             $('.cv-expand').addClass('open'); 
             $('.cv-list').slideDown();
             $('.fa-chevron-down').css('transform', 'rotate(180deg)') //矢印回転
-            $('.cv-expand').text('経歴を閉じる');
+            $('.cv-expand').text('案件経歴を閉じる');
             console.log("show")
         }
     })
@@ -56,7 +56,7 @@ $(function() {
         console.log($modalId)
         switch ($modalId) {
             case 'portfolio': //ポートフォリオの場合
-                bodyFix(scrollPosition);
+                // bodyFix(scrollPosition);
                 $('#portfolio-modal').fadeIn();
                 break;
             case 'no2': //test no2の場合
@@ -72,8 +72,8 @@ $(function() {
     })
     //制作物モーダルクローズ処理
     $('.close-modal').click(function(){
-        var scrollPosition = $(window).scrollTop();
+        // var scrollPosition = $(window).scrollTop();
         $('.modal').fadeOut();
-        bodyRelease(scrollPosition);
+        // bodyRelease(scrollPosition);
     })
 })
